@@ -1,0 +1,166 @@
+<!DOCTYPE html >
+<html>
+
+    <head>
+        <title>365 Entertainment</title>
+        <meta charset ="utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1, user-scalability=yes">
+
+        <link rel = "stylesheet" href ="index.css">        
+<style>
+
+
+    .textOverImage{
+        position:relative;
+        width:24%;
+    /*    height:300px;*/
+        float:left;
+        margin:6px;
+        background-size:100%;
+        background-position:center;
+        transition:0.5s;
+      }
+
+      .textOverImage:hover{
+        background-size:110%;
+      }
+
+      .textOverImage:after{
+        position:absolute;
+        top:90%;
+        bottom:0;
+        left:0;
+        right:0;
+          word-wrap: break-word;
+          white-space:pre-wrap;
+        overflow:hidden;
+        background-color:rgba(0,0,0,0.3);
+        color:#fff;
+        padding:0 8px;
+        content:attr(data-text);
+        transition:0.5s;
+      }
+
+      .textOverImage:hover:after{
+        top:0;
+        padding:8px;
+        background-color:rgba(0,0,0,0.6);
+      }
+
+      .textOverImage:first-line{
+        color:#fff;
+        font-weight:bold;
+        font-size:1.5em;
+      }
+     
+    .search_button{
+    
+    position: absolute;
+    top: 14%;
+    left: 95%;
+
+    background: transparent;
+    border: 0;
+    cursor:pointer;
+}
+
+.search_button img{
+    width: 18px;
+  
+}
+    
+    h1{
+    font-family: sans-serif; 
+    font-weight: normal;
+    font-size: 20px;
+    color:white;
+    text-align: justify;
+    text-indent: 20px;
+    border-bottom-style:solid;
+    border-left: 50px;
+    border-bottom-width: thin;
+    width:100%;
+}
+
+    
+</style>
+         
+    </head>
+
+    <body>
+       <div class= "main_container">
+            <div class ="navbar_container"> 
+                <div id = "Logo"><a href="index.html">365</a></div>
+                <div id = "Movies"><a href="Movies.html">Movies</a> </div>
+                <div id = "TV_Series"><a href="TV_Series.html">TV Series</a> </div>
+                <div id = "Audio"><a href="Audio.html">Audio</a> </div>
+            </div>      
+     
+           
+
+    <div class = "genre_search">
+           
+               <form name="formid">
+                   <select id ="genrecategory" name = "genrecategory" onchange="getimages(id)">
+
+                        <option class= "Genre" id= "Genre" value="Genre">Genre</option>
+                        <option class = "All" id = "All" value="All">All</option>
+                        <option class = "Drama" id = "Drama" value="Drama">Drama</option>
+                        <option class = "Sci-Fi" id = "Sci-Fi" value="Sci-Fi">Sci-Fi</option>
+                        <option class = "Thriller" id = "Thriller" value="Thriller">Thriller</option>
+                        <option class = "Horror" id = "Horror" value="Horror">Horror</option>
+                        <option class = "Romantic" id = "Romance" value="Romantic">Romantic</option>
+
+                    </select>
+                   
+                </form>                 
+
+               
+               
+        <div id = "search" >
+            
+                    <input type="text" id="inputsearch" name="inputsearch" placeholder ="Search your favourite movie title"/>
+                    <button class= "search_button" onClick="getimages(id)">
+                        <img src="Movie_images/All/search.png" alt ="">
+                 
+                    </button>
+    
+ 
+            
+        </div>
+     </div>
+            
+
+               
+        <div class= "images_container carousal2" id="allimages">
+            
+            <label id= "lbl_genre" ></label>
+            
+            <div id="charactersList" class="character"></div>
+            
+                    
+        
+          </div>             
+
+           
+           <div class="footer_container">
+           <div class= "footer1"></div>
+               <div class= "footer2">
+                <div id = "footerlogo"><a href="index.html">365</a></div>
+                   <p> Powered by 365 Entertainment Portal. All Rights Reserved.</p>
+               
+               </div>
+           
+           </div>
+           
+        </div>
+<!--        <script type="text/javascript" src="allimages.json"></script>-->
+        <script src="movies.js"></script>
+        
+    </body>
+
+
+
+</html>
+
+
